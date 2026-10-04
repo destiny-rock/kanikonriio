@@ -38,10 +38,11 @@ const styles = StyleSheet.create({
   },
   aiMessage: {
     alignSelf: 'flex-start',
-    backgroundColor: '#E9E9EB',
+    backgroundColor: colors.secondary,
   },
   text: {
     fontSize: 16,
+    color: colors.text,
   },
 });
 

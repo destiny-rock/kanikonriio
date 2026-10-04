@@ -51,18 +51,18 @@ const styles = StyleSheet.create({
   },
   date: {
     fontSize: 12,
-    color: '#999',
+    color: colors.textMuted,
     marginBottom: 4,
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#fff',
+    color: colors.text,
     marginBottom: 8,
   },
   preview: {
     fontSize: 14,
-    color: '#ccc',
+    color: colors.textSoft,
   },
 });
 

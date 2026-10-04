@@ -1,7 +1,7 @@
 # Kanikonriio Notes
 
 <p align="center">
-  <img src="assets/logo.png" alt="Kanikonriio Notes logo" width="160"/>
+  <img src="assets/brand/wordmark.png" alt="Kanikonriio Notes logo" width="320"/>
 </p>
 
 > good mind — private, offline note-taking.
@@ -38,7 +38,9 @@ npm run ios
 | iOS name / permission text | `ios/Kanikonriio/Info.plist`, `ios/Kanikonriio/LaunchScreen.storyboard` |
 | App icons and logo | `ios/Kanikonriio/Images.xcassets/AppIcon.appiconset/1024.png`, `android/app/src/main/res/mipmap-*/`, `assets/logo.png` |
 
-The current icons are placeholders. Regenerate them after changing colors with `python3 scripts/generate_icons.py` (needs `pip install pillow`), or swap in your own artwork.
+Brand artwork lives in `assets/brand/` (`wordmark.png`, and `mark.png`, the sparkle used for the app icon). Regenerate the app icons with `python3 scripts/generate_icons.py` (needs `pip install pillow`).
+
+Brand palette: purple `#8041FF`, cream `#FFFEF0`, yellow `#ECD54D`, pink `#F88FCE`, peach `#F9BA8F`, blue `#92B3F6`.
 
 The bundle identifier is `com.destinyrock.kanikonriio`. Change it before publishing if you want a different one.
 

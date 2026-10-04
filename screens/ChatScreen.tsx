@@ -18,6 +18,7 @@ import Toast from 'react-native-simple-toast';
 import { useIsFocused, useNavigation } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
+import { colors } from '../theme/brand';
 
 type ChatScreenProps = {};
 
@@ -313,7 +314,7 @@ const ChatScreen: React.FC<ChatScreenProps> = () => {
           value={inputText}
           onChangeText={setInputText}
           placeholder={hasContent ? "Ask anything about the current note" : "Chat disabled - No content available"}
-          placeholderTextColor="#999"
+          placeholderTextColor={colors.textMuted}
           ref={textInputRef}
           multiline={true}
           numberOfLines={2}
@@ -325,7 +326,7 @@ const ChatScreen: React.FC<ChatScreenProps> = () => {
             onPress={handleStop}
             disabled={!hasContent}
           >
-            <Square color="#fff" />
+            <Square color={colors.text} />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity 
@@ -333,7 +334,7 @@ const ChatScreen: React.FC<ChatScreenProps> = () => {
             onPress={handleSend}
             disabled={!hasContent}
           >
-            <Send color={hasContent ? "#fff" : "#999"} />
+            <Send color={hasContent ? colors.text : colors.textMuted} />
           </TouchableOpacity>
         )}
       </View>

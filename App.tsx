@@ -58,10 +58,10 @@ const NewNoteTabNavigator = () => {
           backgroundColor: colors.background,
         },
         tabBarIndicatorStyle: {
-          backgroundColor: colors.primary,
+          backgroundColor: colors.highlight,
         },
-        tabBarActiveTintColor: '#fff',
-        tabBarInactiveTintColor: '#999',
+        tabBarActiveTintColor: colors.text,
+        tabBarInactiveTintColor: colors.textMuted,
         tabBarLabelStyle: {
           fontSize: 14,
           textTransform: 'none',
@@ -113,12 +113,12 @@ const App = () => {
             <Stack.Navigator
               screenOptions={{
                 headerStyle: {
-                  backgroundColor: colors.background,
+                  backgroundColor: colors.header,
                 },
                 headerTitleStyle: {
-                  color: '#fff',
+                  color: colors.text,
                 },
-                headerTintColor: '#fff',
+                headerTintColor: colors.text,
                 contentStyle: {
                   backgroundColor: colors.background,
                 },

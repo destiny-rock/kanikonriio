@@ -1,44 +1,27 @@
-"""Regenerate placeholder app icons from the brand colors.
+"""Regenerate app icons from the brand mark.
 
-Usage: pip install pillow && python3 scripts/generate_icons.py [LETTER]
+Usage: pip install pillow && python3 scripts/generate_icons.py
 
-Replace with real artwork when you have a logo: drop a 1024x1024 PNG at
-ios/Kanikonriio/Images.xcassets/AppIcon.appiconset/1024.png and resize it
-into android/app/src/main/res/mipmap-*/ic_launcher*.png.
+Draws assets/brand/mark.png (the Kanikonriio sparkle, transparent PNG)
+centered on the brand purple, and writes the iOS, Android, and README icons.
+Swap assets/brand/mark.png or BACKGROUND to change the icon.
 """
 import glob
-import sys
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw
 
-BACKGROUND = (0x1C, 0x1C, 0x1C, 255)  # brand.colors.background
-PRIMARY = (0x2A, 0x67, 0x73, 255)  # brand.colors.primary
-LETTER = sys.argv[1] if len(sys.argv) > 1 else "K"
-
-
-def load_font(size):
-    candidates = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", "Arial Bold.ttf", "arialbd.ttf"]
-    candidates += glob.glob("/usr/share/fonts/**/*Bold*.ttf", recursive=True)
-    for path in candidates:
-        try:
-            return ImageFont.truetype(path, size)
-        except OSError:
-            pass
-    return ImageFont.load_default(size)
+BACKGROUND = (0x80, 0x41, 0xFF, 255)  # palette.purple in theme/brand.ts
+MARK = Image.open("assets/brand/mark.png").convert("RGBA")
+MARK_SCALE = 0.5  # mark width/height as a fraction of the icon
 
 
 def make_icon(size, round_icon=False):
     img = Image.new("RGBA", (size, size), (0, 0, 0, 0) if round_icon else BACKGROUND)
-    draw = ImageDraw.Draw(img)
     if round_icon:
-        draw.ellipse([0, 0, size - 1, size - 1], fill=BACKGROUND)
-    margin = int(size * 0.16)
-    draw.ellipse([margin, margin, size - margin, size - margin], fill=PRIMARY)
-    font = load_font(int(size * 0.42))
-    box = draw.textbbox((0, 0), LETTER, font=font)
-    x = (size - (box[2] - box[0])) / 2 - box[0]
-    y = (size - (box[3] - box[1])) / 2 - box[1]
-    draw.text((x, y), LETTER, font=font, fill="white")
+        ImageDraw.Draw(img).ellipse([0, 0, size - 1, size - 1], fill=BACKGROUND)
+    scale = size * MARK_SCALE / max(MARK.size)
+    mark = MARK.resize((round(MARK.width * scale), round(MARK.height * scale)), Image.LANCZOS)
+    img.alpha_composite(mark, ((size - mark.width) // 2, (size - mark.height) // 2))
     return img
 
 

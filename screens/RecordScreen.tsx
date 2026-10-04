@@ -247,7 +247,7 @@ const RecordScreen: React.FC<RecordScreenProps> = () => {
     notesInput: {
       flex: showTranscription ? 1 : 2,
       backgroundColor: colors.surface,
-      color: '#fff',
+      color: colors.text,
       padding: 16,
       borderRadius: 8,
       fontSize: 16,
@@ -276,7 +276,7 @@ const RecordScreen: React.FC<RecordScreenProps> = () => {
               backgroundColor: isRecording ? colors.danger : colors.primary
             }]}
             labelStyle={styles.recordButtonLabel}
-            textColor="#fff"
+            textColor={colors.text}
           >
             {isRecording ? 'Stop Recording' : 'Start Recording'}
           </Button>
@@ -287,7 +287,7 @@ const RecordScreen: React.FC<RecordScreenProps> = () => {
               onPress={() => navigation.navigate('Summarize', { noteId: noteId.current })}
               style={styles.summarizeButton}
             >
-              <FileText color="#fff" size={24} />
+              <FileText color={colors.text} size={24} />
             </TouchableOpacity>
           )}
         </View>
@@ -299,7 +299,7 @@ const RecordScreen: React.FC<RecordScreenProps> = () => {
           style={[styles.dismissButtonBase, { bottom: keyboardHeight + 8 }]}
           onPress={() => Keyboard.dismiss()}
         >
-          <ChevronDown color="#fff" size={24} />
+          <ChevronDown color={colors.text} size={24} />
         </TouchableOpacity>
       )}
 
@@ -312,7 +312,7 @@ const RecordScreen: React.FC<RecordScreenProps> = () => {
         value={manualNotes}
         onChangeText={handleNotesChange}
         placeholder="Your notes here. Add your own notes for better summaries!"
-        placeholderTextColor="#666"
+        placeholderTextColor={colors.textFaint}
         multiline
         textAlignVertical="top"
       />
@@ -326,8 +326,8 @@ const RecordScreen: React.FC<RecordScreenProps> = () => {
           <Text style={styles.transcriptionTitle}>Voice Transcription</Text>
           <IconButton
             icon={() => showTranscription ? 
-              <ChevronUp color="#fff" size={24} /> : 
-              <ChevronDown color="#fff" size={24} />
+              <ChevronUp color={colors.text} size={24} /> : 
+              <ChevronDown color={colors.text} size={24} />
             }
           />
         </TouchableOpacity>
@@ -389,10 +389,10 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     lineHeight: 24,
-    color: '#fff',
+    color: colors.text,
   },
   previewText: {
-    color: '#999999',
+    color: colors.textMuted,
     fontStyle: 'italic',
   },
   transcriptionContainer: {
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   transcriptionTitle: {
-    color: '#fff',
+    color: colors.text,
     fontSize: 16,
     fontWeight: 'bold',
     paddingLeft: 10
@@ -421,7 +421,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   sectionTitle: {
-    color: '#fff',
+    color: colors.text,
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 8,

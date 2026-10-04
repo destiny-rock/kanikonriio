@@ -14,13 +14,13 @@ const styles = StyleSheet.create({
       backgroundColor: colors.background,
     },
     headerTitle: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 18,
       fontWeight: 'bold',
     },
     headerButton: {
       padding: 5,
-      color: '#fff',
+      color: colors.text,
       fontWeight: 'bold',
     },
     messagesContainer: {
@@ -46,14 +46,14 @@ const styles = StyleSheet.create({
       backgroundColor: colors.secondary,
     },
     userMessageText: {
-      color: '#FFFFFF',
+      color: colors.text,
     },
     aiMessageText: {
-      color: '#fff',
+      color: colors.text,
     },
     inputContainer: {
       flexDirection: 'row',
-      backgroundColor: '#000',
+      backgroundColor: colors.backgroundDeep,
       maxHeight: 100,
       paddingBottom: 32,
       paddingTop: 10,
@@ -63,12 +63,12 @@ const styles = StyleSheet.create({
     input: {
       flex: 1,
       borderWidth: 1,
-      borderColor: '#ccc',
+      borderColor: colors.textSoft,
       borderRadius: 20,
       paddingHorizontal: 15,
       paddingVertical: 10,
       marginRight: 10,
-      color: '#fff',
+      color: colors.text,
     },
     sendButton: {
       justifyContent: 'center',
@@ -85,43 +85,43 @@ const styles = StyleSheet.create({
       paddingHorizontal: 20,
     },
     sendButtonText: {
-      color: '#fff',
+      color: colors.text,
       fontWeight: 'bold',
     },
     clearButton: {
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#2b2727',
+      backgroundColor: colors.surface,
       borderRadius: 20,
       paddingHorizontal: 15,
       marginRight: 10,
     },
     clearButtonText: {
-      color: '#fff',
+      color: colors.text,
       fontWeight: 'bold',
     },
     infoContainer: {
       flex: 1,
       paddingTop: 60,
-      backgroundColor: '#000',
+      backgroundColor: colors.backgroundDeep,
     },
     infoHeader: {
       flexDirection: 'row',
       alignItems: 'center',
       padding: 15,
-      backgroundColor: '#000',
+      backgroundColor: colors.backgroundDeep,
     },
     backButton: {
       flexDirection: 'row',
       alignItems: 'center',
     },
     backButtonText: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 16,
       marginLeft: 5,
     },
     infoTitle: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 20,
       fontWeight: 'bold',
       marginLeft: 85,
@@ -134,18 +134,18 @@ const styles = StyleSheet.create({
       marginBottom: 30,
     },
     infoSectionTitle: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 24,
       fontWeight: 'bold',
       marginBottom: 5,
     },
     versionText: {
-      color: '#999',
+      color: colors.textMuted,
       fontSize: 16,
       marginBottom: 10,
     },
     infoDescription: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 16,
       lineHeight: 22,
     },
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
       marginBottom: 30,
     },
     licenseSectionTitle: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 20,
       fontWeight: 'bold',
       marginBottom: 15,
@@ -162,13 +162,13 @@ const styles = StyleSheet.create({
       marginBottom: 20,
     },
     licenseTitle: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 18,
       fontWeight: 'bold',
       marginBottom: 5,
     },
     licenseText: {
-      color: '#ccc',
+      color: colors.textSoft,
       fontSize: 14,
       lineHeight: 20,
       marginBottom: 5,
@@ -182,10 +182,10 @@ const styles = StyleSheet.create({
       marginTop: 20,
       paddingTop: 20,
       borderTopWidth: 1,
-      borderTopColor: '#333',
+      borderTopColor: colors.border,
     },
     copyrightText: {
-      color: '#999',
+      color: colors.textMuted,
       fontSize: 14,
       textAlign: 'center',
     },
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     },
     unsupportedText: {
       fontSize: 18,
-      color: '#fff',
+      color: colors.text,
       textAlign: 'center'
     },
     noContentContainer: {
@@ -209,15 +209,15 @@ const styles = StyleSheet.create({
     },
     noContentText: {
       textAlign: 'center',
-      color: '#666',
+      color: colors.textFaint,
       fontSize: 16,
     },
     inputDisabled: {
       backgroundColor: '#f0f0f0',
-      color: '#999',
+      color: colors.textMuted,
     },
     sendButtonDisabled: {
-      backgroundColor: '#ccc',
+      backgroundColor: colors.textSoft,
     },
     contentSection: {
       marginBottom: 20,
@@ -228,17 +228,17 @@ const styles = StyleSheet.create({
     sectionTitle: {
       fontSize: 18,
       fontWeight: 'bold',
-      color: '#fff',
+      color: colors.text,
       marginBottom: 12,
     },
     contentText: {
       fontSize: 16,
-      color: '#fff',
+      color: colors.text,
       lineHeight: 24,
     },
     buttonContainer: {
       padding: 16,
-      backgroundColor: '#000',
+      backgroundColor: colors.backgroundDeep,
     },
     button: {
       backgroundColor: colors.primary,
@@ -247,10 +247,10 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     buttonDisabled: {
-      backgroundColor: '#666',
+      backgroundColor: colors.textFaint,
     },
     buttonText: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 16,
     },
     summarizeButton: {
@@ -269,7 +269,7 @@ const styles = StyleSheet.create({
     },
     noMessagesText: {
       textAlign: 'center',
-      color: '#666',
+      color: colors.textFaint,
       fontSize: 16,
       lineHeight: 24,
     },
@@ -277,22 +277,22 @@ const styles = StyleSheet.create({
   
   const markdownStyles = {
     text: {
-      color: '#fff', // White text
+      color: colors.text, // White text
     },
     heading1: {
-      color: '#fff', // White heading
+      color: colors.text, // White heading
     },
     strong: {
-      color: '#fff', // White bold text
+      color: colors.text, // White bold text
     },
     em: {
-      color: '#fff', // White italic text
+      color: colors.text, // White italic text
     },
     link: {
-      color: '#1E90FF', // Blue color for links
+      color: colors.link, // Blue color for links
     },
     list_item: {
-      color: '#fff', // White list items
+      color: colors.text, // White list items
     },
     code: {
       color: '#000' // code should be black
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
       padding: 10,
     },
     optionText: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 16,
     },
   };

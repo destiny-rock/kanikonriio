@@ -124,7 +124,7 @@ const NoteListScreen: React.FC<NoteListScreenProps> = ({ navigation }) => {
         }}
       >
         <View style={styles.newNoteContent}>
-          <Plus size={24} color="#fff" />
+          <Plus size={24} color={colors.text} />
           <Text style={styles.newNoteText}>New Note</Text>
         </View>
       </TouchableOpacity>
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   deleteButton: {
-    backgroundColor: '#FF3B30',
+    backgroundColor: colors.danger,
     justifyContent: 'center',
     alignItems: 'center',
     width: 80,
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   deleteButtonText: {
-    color: '#fff',
+    color: colors.text,
     fontWeight: 'bold',
     fontSize: 16,
   },
@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   newNoteText: {
-    color: '#fff',
+    color: colors.text,
     fontSize: 16,
     fontWeight: '500',
   },

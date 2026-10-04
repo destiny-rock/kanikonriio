@@ -289,28 +289,28 @@ const SummarizeScreen: React.FC<SummarizeScreenProps> = () => {
 
   const markdownStyles = {
     body: {
-      color: '#fff',
+      color: colors.text,
     },
     heading1: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 24,
       marginBottom: 16,
     },
     heading2: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 20,
       marginBottom: 12,
     },
     paragraph: {
-      color: '#fff',
+      color: colors.text,
       fontSize: 16,
       lineHeight: 24,
     },
     listItem: {
-      color: '#fff',
+      color: colors.text,
     },
     bullet_list: {
-      color: '#fff',
+      color: colors.text,
     },
   };
 
@@ -324,7 +324,7 @@ const SummarizeScreen: React.FC<SummarizeScreenProps> = () => {
           disabled={isDisabled}
           style={[styles.summarizeButton, isDisabled && styles.buttonDisabled]}
           labelStyle={styles.buttonLabel}
-          textColor="#fff"
+          textColor={colors.text}
         >
           {isLoading ? 'Generating...' : (summarizedText ? 'Regenerate Summary' : 'Generate Summary')}
         </Button>
@@ -337,7 +337,7 @@ const SummarizeScreen: React.FC<SummarizeScreenProps> = () => {
           >
             <Share2 
               size={24}
-              color="#fff"
+              color={colors.text}
               strokeWidth={2}
             />
           </TouchableOpacity>
@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonDisabled: {
-    backgroundColor: '#666',
+    backgroundColor: colors.textFaint,
   },
   buttonLabel: {
     fontSize: 16,
@@ -430,12 +430,12 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   messageText: {
-    color: '#666',
+    color: colors.textFaint,
     fontSize: 16,
     textAlign: 'center',
   },
   titleText: {
-    color: '#fff',
+    color: colors.text,
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 16,
