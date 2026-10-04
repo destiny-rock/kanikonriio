@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Kanikonriio</string>
+	<string>Kanikonriio Notes</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -43,9 +43,9 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Kanikonriio uses the microphone to record audio notes and transcribe them. The audio and data never leaves your device</string>
+	<string>Kanikonriio Notes uses the microphone to record audio notes and transcribe them. The audio and data never leaves your device</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Kanikonriio uses speech recognition to transcribe your audio notes. This happens offline on your device and the data never leaves your device</string>
+	<string>Kanikonriio Notes uses speech recognition to transcribe your audio notes. This happens offline on your device and the data never leaves your device</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>

@@ -1,12 +1,12 @@
-# Kanikonriio
+# Kanikonriio Notes
 
 <p align="center">
-  <img src="assets/logo.png" alt="Kanikonriio logo" width="160"/>
+  <img src="assets/logo.png" alt="Kanikonriio Notes logo" width="160"/>
 </p>
 
 > good mind — private, offline note-taking.
 
-Kanikonriio is a note-taking app that runs entirely on your device. Record voice notes, jot down text, generate summaries, and chat with your notes — without an internet connection.
+Kanikonriio Notes is a note-taking app that runs entirely on your device. Record voice notes, jot down text, generate summaries, and chat with your notes — without an internet connection.
 
 iOS first (Android project included but untested).
 
@@ -32,6 +32,7 @@ npm run ios
 | What | Where |
 | --- | --- |
 | In-app name, tagline, colors | `theme/brand.ts` |
+| Internal project/module name (`Kanikonriio`, no spaces; only change if you also rename the native projects) | `app.json` `name`, `ios/Kanikonriio*`, `AppDelegate.mm`, `MainActivity.kt` |
 | App display name, bundle IDs, permission prompts | `app.json` |
 | Android name / package | `android/app/src/main/res/values/strings.xml`, `android/app/build.gradle` |
 | iOS name / permission text | `ios/Kanikonriio/Info.plist`, `ios/Kanikonriio/LaunchScreen.storyboard` |

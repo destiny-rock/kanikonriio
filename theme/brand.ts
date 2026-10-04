@@ -7,7 +7,7 @@
  */
 
 export const brand = {
-  name: 'Kanikonriio',
+  name: 'Kanikonriio Notes',
   tagline: 'good mind',
   colors: {
     // Accent used for buttons, active tab indicator, and your chat bubbles

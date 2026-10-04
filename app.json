@@ -1,14 +1,14 @@
 {
   "name": "Kanikonriio",
-  "displayName": "Kanikonriio",
+  "displayName": "Kanikonriio Notes",
   "icon": "./assets/images/icon.png",
   "expo": {
     "plugins": [
       [
         "expo-speech-recognition",
         {
-          "microphonePermission": "Allow Kanikonriio to use the microphone.",
-          "speechRecognitionPermission": "Allow Kanikonriio to use speech recognition."
+          "microphonePermission": "Allow Kanikonriio Notes to use the microphone.",
+          "speechRecognitionPermission": "Allow Kanikonriio Notes to use speech recognition."
         }
       ]
     ],
@@ -20,8 +20,8 @@
     },
     "ios": {
       "infoPlist": {
-        "NSSpeechRecognitionUsageDescription": "Allow Kanikonriio to use speech recognition.",
-        "NSMicrophoneUsageDescription": "Allow Kanikonriio to use the microphone."
+        "NSSpeechRecognitionUsageDescription": "Allow Kanikonriio Notes to use speech recognition.",
+        "NSMicrophoneUsageDescription": "Allow Kanikonriio Notes to use the microphone."
       },
       "bundleIdentifier": "com.destinyrock.kanikonriio"
     }
